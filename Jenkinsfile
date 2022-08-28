@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-  
     stage('deploy-to-exchange') {
       steps {
         // deploys the same binary zip file exchange
