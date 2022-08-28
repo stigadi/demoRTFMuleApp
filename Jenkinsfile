@@ -1,18 +1,7 @@
 pipeline {
   agent any
   stages {
-  	/*stage('Unit Test') { 
-      steps {
-        sh 'mvn clean test'
-      }
-    }
-    stage('deploy-to-nexus') {
-      steps {
-        git 'https://github.com/gituser123/hello-world.git'
-        // use profile nexus (-P nexus) to deploy to Nexus.
-        sh "mvn clean deploy -P nexus"
-      }
-    }*/
+  
     stage('deploy-to-exchange') {
       steps {
         // deploys the same binary zip file exchange
