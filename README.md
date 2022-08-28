@@ -1,2 +1,2 @@
 # demoRTFMuleApp
-Demo RTF CICD with a simple mule app
+Demo RTF CICD with a simple mule app. 
