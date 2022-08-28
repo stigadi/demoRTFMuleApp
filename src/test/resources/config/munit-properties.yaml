@@ -1,0 +1,8 @@
+api:
+    id: "111111"
+
+https:
+  keystore:
+    file: "jks/self-signed-mule.jks"
+    password: "![VSHD+4O85deWtdo0tsMOmdq5t7sa8P+U6eqqj2IYBVQ=]"
+    type: "JKS"

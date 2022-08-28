@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
+	xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway"
+	xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+	xmlns:json-logger="http://www.mulesoft.org/schema/mule/json-logger"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd 
+http://www.mulesoft.org/schema/mule/json-logger http://www.mulesoft.org/schema/mule/json-logger/current/mule-json-logger.xsd
+http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd
+http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd">
+	<apikit:config
+		name="manutan-api-specification-template-config"
+		api="api/helloworld.raml"
+		outboundHeadersMapName="outboundHeaders"
+		httpStatusVarName="httpStatus" />
+	<http:listener-config
+		name="api-http-listener-config" doc:name="api-http-listener-config"
+		doc:id="f896240d-9c75-43b9-9778-f287a0aea0b2">
+		<http:listener-connection host="0.0.0.0"
+			port="${http.port}">
+		</http:listener-connection>
+	</http:listener-config>
+	<configuration-properties
+		doc:name="Configuration properties"
+		doc:id="1158f115-9ab3-4462-b52f-f3329f20098d"
+		file="config/default.yaml" />
+	<configuration-properties
+		doc:name="Configuration properties"
+		doc:id="ec357ca6-b0f0-48e0-a3a5-59372c888871"
+		file="config/${mule.env}-properties.yaml" />
+	<json-logger:config name="JSON_Logger_Config"
+		doc:name="JSON Logger Config"
+		doc:id="18867db2-587a-460b-a65d-fded2c98ffe8"
+		applicationName="${application.name}"
+		applicationVersion="${application.version}" environment="${mule.env}" />
+	<configuration-properties
+		doc:name="Configuration properties"
+		doc:id="c67a8cd1-1ff7-490f-97e3-da5cb400ba28"
+		file="config/error-properties.yaml" />
+
+</mule>

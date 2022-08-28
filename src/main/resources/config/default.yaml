@@ -1,0 +1,14 @@
+application:
+  # Used in JSON Logger Config
+  name: "${project.artifactId}"
+  version: "${project.version}"
+  # Logged in the Error Handling Framework
+  layer: "${api.layer}"
+
+# Used when running locally - in CH it is pre-set.
+https:
+  port: "8081"
+  
+  
+http:
+  port: "8081"
