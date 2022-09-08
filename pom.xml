@@ -4,7 +4,7 @@
 
 	<groupId>496ac21f-ecc4-4296-bbb7-cbb1ebcb7923</groupId>
 	<artifactId>demo-rtf-cicd-muleapp</artifactId>
-	<version>1.1.0</version>
+	<version>1.0.9</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo-rtf-cicd-muleapp</name>
@@ -59,7 +59,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<runtimeFabricDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
+						<uri>https://eu1.anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${username}</username>
 						<password>${password}</password>
@@ -76,12 +76,12 @@
 						<properties>
 							<mule.env>${env}</mule.env>
 							<mule.key>${key}</mule.key>
-							<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
+							<anypoint.platform.base_uri>https://eu1.anypoint.mulesoft.com</anypoint.platform.base_uri>
 							<anypoint.platform.client_id>${platformClientId}</anypoint.platform.client_id>
 							<anypoint.platform.client_secret>${platformClientSecret}</anypoint.platform.client_secret>
-							<anypoint.platform.platform_base_uri>https://anypoint.mulesoft.com</anypoint.platform.platform_base_uri>
-							<anypoint.platform.contracts_base_uri>https://anypoint.mulesoft.com/apigateway/ccs</anypoint.platform.contracts_base_uri>
-							<anypoint.platform.coreservice_base_uri>https://anypoint.mulesoft.com/accounts</anypoint.platform.coreservice_base_uri>
+							<anypoint.platform.platform_base_uri>https://eu1.anypoint.mulesoft.com</anypoint.platform.platform_base_uri>
+							<anypoint.platform.contracts_base_uri>https://eu1.anypoint.mulesoft.com/apigateway/ccs</anypoint.platform.contracts_base_uri>
+							<anypoint.platform.coreservice_base_uri>https://eu1.anypoint.mulesoft.com/accounts</anypoint.platform.coreservice_base_uri>
 							<anypoint.platform.visualizer.layer>system</anypoint.platform.visualizer.layer>
 						</properties>
 						<deploymentSettings>
@@ -249,7 +249,7 @@
 		<repository>
 			<id>anypoint-exchange-v2</id>
 			<name>Anypoint Exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+			<url>https://maven.eu1.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
@@ -274,7 +274,7 @@
 		<repository>
 			<id>anypoint-exchange-v2</id>
 			<name>Exchange2 Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
+			<url>https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
