@@ -1,6 +1,6 @@
 pipeline {
   //agent any
-  agent {label 'linux'}
+  agent any
   tools {
       maven '3.8.6'
   }
