@@ -22,7 +22,7 @@ pipeline {
       }
       post {
         success {
-          sh 'echo RTF CICD all done!'
+          sh 'echo RTF CICD all done!  '
         }
       }
     }
