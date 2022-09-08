@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  //agent any
+  agent {label ‘linux’}
+  tools {
+      maven ‘3.8.6’
+  }
   stages {
     stage('deploy-to-exchange') {
       steps {
