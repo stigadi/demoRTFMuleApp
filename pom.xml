@@ -61,8 +61,9 @@
 					<runtimeFabricDeployment>
 						<uri>https://eu1.anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
+						<!--<username>${username}</username>
+						<password>${password}</password> -->
+						<authToken>${authToken}</authToken>
 						<!-- Configure the Anypoint Platforms credentials in settings.xml -->
 						<server>anypoint-exchange-v2</server>
 						<applicationName>${rtf.app.name}</applicationName>
