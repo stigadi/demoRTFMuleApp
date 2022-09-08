@@ -99,11 +99,11 @@
 									<reserved>1000Mi</reserved>
 								</memory>
 							</resources>
-							<http>
+							<!--<http>
 								<inbound>
 									<publicUrl>${ingressUrl}/${deploymentName}</publicUrl>
 								</inbound>
-							</http>
+							</http> -->
 						</deploymentSettings>
 					</runtimeFabricDeployment>
 					<classifier>mule-application</classifier>
