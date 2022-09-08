@@ -4,7 +4,7 @@
 
 	<groupId>b6430f15-51c3-4480-8ed3-917175ef77af</groupId>
 	<artifactId>demo-rtf-cicd-muleapp</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo-rtf-cicd-muleapp</name>
